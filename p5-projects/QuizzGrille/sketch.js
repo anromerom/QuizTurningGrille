@@ -2,91 +2,91 @@ const N = 4
 
 const questions = [
     {
-                 a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 b:"USA",
+                 a: "NSA", 
+                 c: "CIA", 
+                 d: "BMW",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "¿Cuál era el nombre del bote del señor Ellison y Oracle?" ,
                  color: "#540d6e"
     },
     {
-                a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 a: "Organización del trabajo",
+                 b: "Coordinación del trabajo, información y conocimiento", 
+                 c: "Requerimientos para un producto valioso", 
+                 d: "Procedimientos lógicos de transacciones rutinarias",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "¿Cuál NO es una definición de proceso de negocio?" ,
                  color: "#d00000"
     },
     {
-                 a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 d: "Un conjunto de procesos de negocio",
+                 b: "Un conjunto de funciones", 
+                 c: "Un conjunto de productos", 
+                 a: "Un conjunto de señores y señoras",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "Con base en la presentación, una empresa puede verse como:" ,
                  color:"#ffba08"
     },
     {
-                a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 a:"Manufactura",
+                 b: "Ventas", 
+                 d: "Contabilidad", 
+                 c: "Recursos Organizacionales",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "Seleccione la opción que no sea un área funcional:" ,
                  color:"#3f88c5"
     },
     {
-                a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 a:"Se enfocan en problemas que son únicos y estáticos",
+                 b: "Están dirigidos a gerentes de nivel superior", 
+                 d: "Prescinde de los TPS", 
+                 c: "Usa información de TPS, MIS y fuentes externas",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "¿Cuál de las siguientes opciones es una carácteristica de los DSS (Sistemas de Soporte de Decisiones)?" ,
                  color:"#ea638c"
     },
     {
-                a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                a:"Apple",
+                 b: "Intrawest", 
+                 d: "Leiner Health Products", 
+                 c: "Procter & Gamble",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "¿Qué compañia tiene un ESS que muestra la información en tiempo real?" ,
                  color: "#d84a05"
     },
     {
-                 a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 a:"Ambas son falsas.",
+                 c: "(I) es falsa y (II) es verdadera.", 
+                 b: "(I) es verdadera y (II) es falsa.", 
+                 d: "Ambas son verdaderas.",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "(I) Los procesos de negocios abarcan una y solo un área funcional, y (II) Los procesos de negocios son una medida de calidad de las empresas." ,
                  color: "#eca400"
     },
     {
-                a:"Esta es una respuesta",
-                 b: "Esta también", 
-                 c: "Obvio esta también", 
-                 d: "Esta es la correcta",  
+                 a: "Sistema de producción de transacciones",
+                 b: "Sistema de planificación de transacciones", 
+                 c: "Sistema de transacciones procesales", 
+                 d: "Sistema de procesamiento de transacciones",  
                  value : true, 
                  r_value: true,
                  done: false, 
-                 question : "¿Este placeholder de pregunta está bonito aún cuando se extiende por más de lo que debería, SI NO por qué justifique su respuesta?" ,
+                 question : "Según la exposición: ¿Qué significan las siglas TPS en castellano?" ,
                  color: "#01baef"
     }
 ]
@@ -96,7 +96,9 @@ var angle = 0;
 
 function setup() {
 
-	createCanvas(1000, 700);
+	createCanvas(1440, 1000);
+
+
     grid = []
     awidth  =   width < height ? width: height;
     awidth*=0.35 
@@ -232,9 +234,9 @@ function quizzGrid(){
     fill(255);
     text(  grid[ currentQ % N ][floor(currentQ/N)].a, awidth/2 , yoffset*0.85 + awidth , awidth*1.5, awidth/4 , 12 );  
 
-
+fill(0);
     ellipse(awidth/6,   yoffset*1.25 + awidth,   awidth/4,   awidth/4) //B-------------       
-    fill(0);
+    fill(255);
     arc(awidth/6,   yoffset*1.25 + awidth,   awidth/4,   awidth/4  ,-90, 90  ) //B-------------
     fill(0);
     rect(awidth/2 , yoffset*1.25 + awidth , awidth*1.5, awidth/4, 12  );
@@ -358,7 +360,7 @@ function mousePressed(){
 }
 
 
-var message ="teshninciglsrgylriuspitsatlilmreensattogsiawgipvertotehhvaeaxitdtuaimeranpmtlhie"
+var message ="blkCr3XiPty/2. r"
 var plaintext = "";
 
 var clockwise = false;
@@ -470,7 +472,7 @@ background(0);
             angle = angle % 360;
             state = 'message'
             currentH = -1;
-            plaintext+=" ";
+            
             if(turns-- == 0) {
                 
                 state = 'stand';
